@@ -7,13 +7,15 @@ const compiledFunction = pug.compileFile('template.pug');
 // 데이터를 json 형태로 전달한다.
 console.log(compiledFunction(
     {
-        name: 'Timothy'
+        name: 'Timothy',
+        title : "JADE"
     }
 ));
 // "<p>Timothy's Pug source code!</p>"
 
 // Render another set of data
 console.log(compiledFunction({
-  name: 'Forbes'
+  name: 'Forbes',
+  title : "FUG"
 }));
 // "<p>Forbes's Pug source code!</p>"
