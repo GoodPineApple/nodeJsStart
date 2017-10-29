@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        //EventEmitter 클래스를 상소받아서 이벤트를 처리한다.
+        //EventEmitter 개체를 만들어서 객체의 on 메서드에 이벤트의 조류, 콜백함수를 전달한다.
+        //var custom = new process.EventEmitter(); 예전 사용방식 지금은 사용불가
+        
+        //var envet = require(event); 지금 사용하는 방식 이벤트 처리방식
+        //var custom = new event();
+
+        //custom.on('tick',fuction(code){
+
+        //})
+        //강제 이벤트 발생 emit 함수를 사용한다.
+        //custom.emit('tick');
+
+        window.addEventListener('load',function(){
+            alert('문서 로딩중');
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
