@@ -1,0 +1,14 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "This project is test project",
+  "main": "main.js",
+  "scripts": {
+    "test": "This is test"
+  },
+  "keywords": [
+    "test"
+  ],
+  "author": "forest",
+  "license": "ISC"
+}

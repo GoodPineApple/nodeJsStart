@@ -73,6 +73,8 @@ var server = http.createServer(function(request,response){
                 , data: param
             }));
         });   
+        // forever 옵션 추가 (에러가 발생해도 서버 죽지 않음)
+        // forever start -l test.log --minUptime 5000 --spinSleepTime 2000 -a server8.js
     }
 })
 
