@@ -1,2 +1,12 @@
-p #{title}'
+h1 #{title}
 p #{name}'s Pug source code!
+
+ul
+  each val in [1, 2, 3, 4, 5]
+    li= val
+hr
+
+ul
+  each val in data
+    li= val.name + ': ' + val.age + ", " + val.address
+hr

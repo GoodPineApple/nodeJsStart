@@ -38,7 +38,7 @@ var server = http.createServer(function(request,response){
                 , supplies:['map', 'broom', 'duster']
             }));
         });        
-    } else {
+    } else if(path == "/ejs") {
         response.writeHead(200, {"Content-type":"text/html"})
         
         fs.readFile("test2.ejs", "utf-8", function(error,data){
@@ -47,8 +47,23 @@ var server = http.createServer(function(request,response){
                 , data: param
             }));
         });   
+    } else if(path == "/pug1") {
+        response.writeHead(200, {"Content-type":"text/html; charset=UTF-8"})
+        
+        fs.readFile("test3.pug", "utf-8", function(error,data){
 
+            resultFun = pug.compile(data);
+            // 함수 만들어서 호출하기
+            response.end(resultFun({
+                title : '교육생 명단'
+                , name : "태민"
+                , data: param
+            }));
+        });   
+    } else if(path == "/testSupervisor"){
+        response.writeHead(200, {"Content-type":"text/html; charset=UTF-8"})
 
+        response.end("<h1>supervisor</h1>");
     }
 })
 
