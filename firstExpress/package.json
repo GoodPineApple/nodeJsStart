@@ -1,0 +1,18 @@
+{
+  "name": "expresstest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test express"
+  },
+  "keywords": [
+    "express",
+    "test"
+  ],
+  "author": "forest",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}

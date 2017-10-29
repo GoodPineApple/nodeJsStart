@@ -4,7 +4,8 @@
   "description": "This project is test project",
   "main": "main.js",
   "scripts": {
-    "test": "This is test"
+    "start" : "echo \"start\"",
+    "test": "echo \"This is test\""
   },
   "keywords": [
     "test"
