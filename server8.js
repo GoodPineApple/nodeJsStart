@@ -62,8 +62,17 @@ var server = http.createServer(function(request,response){
         });   
     } else if(path == "/testSupervisor"){
         response.writeHead(200, {"Content-type":"text/html; charset=UTF-8"})
-
         response.end("<h1>supervisor</h1>");
+
+    } else if(path == "/testForever"){
+        response.writeHead(200, {"Content-type":"text/html; charset=UTF-8"})
+
+        fs.readFile("undefined.ejs", "utf-8", function(error,data){
+            response.end(ejs.render(data, {
+                title : '교육생 명단'
+                , data: param
+            }));
+        });   
     }
 })
 
