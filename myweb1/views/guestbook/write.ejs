@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        function goWriteSubmit(){
+            if($("#title").val().trim() == ""){
+                alert("제목을 입력하세요.")
+                $("#title").focus();
+                return false;
+            }
+            if($("#contents").val().trim() == ""){
+                alert("내용을 입력하세요.")
+                $("#contents").focus();
+                return false;
+            }
+        }
+    </script>
+    <title>Document</title>
+</head>
+<form action="/guestbook/write" method="post" onsubmit="return goWriteSubmit()">
+<body>
+    <a href="javascript:window.history.back()">뒤로가기</a>
+        <table border="1" style="text-align:center">
+            <tr>
+                <td width="30%">
+                    제목
+                </td>
+                <td>
+                    <input type="text" name="title" id="title" style="width:90%"
+                    required placeholder="제목을 입력하세요">
+                </td>
+            </tr>
+            <tr>
+                <td width="30%"> 
+                    내용
+                </td>
+                <td>
+                    <textarea name="contents" id="contents" rows="10" cols="60"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="글쓰기" style="margin:10px">
+                </td>
+            </tr>
+
+
+
+        </table>
+
+
+
+    </body>
+</form>
+</html>

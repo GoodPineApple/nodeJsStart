@@ -1,0 +1,9 @@
+extends ../layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  p 방명록입니다.
+  ul
+  each val in data
+    li = val.num + " " + val.title + " " + val.wdate  
